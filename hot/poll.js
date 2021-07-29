@@ -12,7 +12,7 @@ if (module.hot) {
 			module.hot
 				.check(true)
 				.then(function (updatedModules) {
-					if (!updatedModules) {
+					if (!updatedModules || !updatedModules.length) {
 						if (fromUpdate) log("info", "[HMR] Update applied.");
 						return;
 					}
